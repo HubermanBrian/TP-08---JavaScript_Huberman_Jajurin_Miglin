@@ -13,15 +13,29 @@ function cortarTexto()
 }
 
 //letra A  
-function mostrarNombresConA() {
+function mostrarNombresConA() 
+{
     let nombresIngresados = document.getElementById("nombres").value;
     let nombresArray = nombresIngresados.split(',').map(nombre => nombre.trim());
     let nombresConA = nombresArray.filter(nombre => nombre.charAt(0).toUpperCase() === 'A');
     let resultadoDiv = document.getElementById("resultado");
-    if (nombresConA.length > 0) {
+    if (nombresConA.length > 0) 
+    {
       resultadoDiv.innerHTML = `<p>Nombres que comienzan con 'A': ${nombresConA.join(', ')}</p>`;
-    } else {
+    } else 
+    {
       resultadoDiv.innerHTML = `<p>No hay nombres que comiencen con 'A'.</p>`;
     }
-  }
+}
+
+//doble de todo
+function duplicarArray(array) 
+{
+    let nuevoArray = array.map((elemento) => elemento * 2);
+    return nuevoArray;
+}
+  
+  let numeros = [1, 2, 3, 4, 5];
+  let numerosDuplicados = duplicarArray(numeros);
+  console.log(numerosDuplicados);
 
