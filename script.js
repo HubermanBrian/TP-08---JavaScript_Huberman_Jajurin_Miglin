@@ -12,3 +12,16 @@ function cortarTexto()
     nuevaCadenaString.innerHTML = nuevaCadenaString.slice(0,numeroPos)
 }
 
+//letra A  
+function mostrarNombresConA() {
+    let nombresIngresados = document.getElementById("nombres").value;
+    let nombresArray = nombresIngresados.split(',').map(nombre => nombre.trim());
+    let nombresConA = nombresArray.filter(nombre => nombre.charAt(0).toUpperCase() === 'A');
+    let resultadoDiv = document.getElementById("resultado");
+    if (nombresConA.length > 0) {
+      resultadoDiv.innerHTML = `<p>Nombres que comienzan con 'A': ${nombresConA.join(', ')}</p>`;
+    } else {
+      resultadoDiv.innerHTML = `<p>No hay nombres que comiencen con 'A'.</p>`;
+    }
+  }
+
