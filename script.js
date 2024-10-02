@@ -74,3 +74,22 @@ const frutas = [
   {
     console.log(`No, no tenemos ${frutaBuscada}!`);
   }
+
+  //Calcular edad
+  function calcularEdad(fechaNacimiento) 
+  {
+    const hoy = new Date();
+    const nacimiento = new Date(fechaNacimiento);
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) 
+    {
+      edad--;
+    }
+    return edad;
+  }
+  
+  const nombre = prompt("Ingresa tu nombre:");
+  const fechaNacimiento = prompt("Ingresa tu fecha de nacimiento (YYYY-MM-DD):");
+  const edad = calcularEdad(fechaNacimiento);
+  console.log(`Hola ${nombre}, tienes ${edad} años!`);
