@@ -39,3 +39,38 @@ function duplicarArray(array)
   let numerosDuplicados = duplicarArray(numeros);
   console.log(numerosDuplicados);
 
+//triangulos
+for (let i = 1; i <= 5; i++) 
+{
+    console.log("*".repeat(i));
+}
+
+//tirando fruta
+const frutas = [
+    "manzana",
+    "banana",
+    "naranja",
+    "pera",
+    "uva",
+    "kiwi",
+    "mango",
+    "sandía",
+    "frutilla",
+    "durazno",
+  ];
+  
+  console.log("Lista de frutas:");
+  frutas.forEach((fruta, a) => 
+  {
+    console.log(`${a + 1}. ${fruta}`);
+  });
+  
+  const frutaBuscada = prompt("Ingresa una fruta:");
+  
+  if (frutas.includes(frutaBuscada)) 
+  {
+    console.log(`Sí, tenemos ${frutaBuscada}!`);
+  } else 
+  {
+    console.log(`No, no tenemos ${frutaBuscada}!`);
+  }
