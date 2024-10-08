@@ -128,6 +128,7 @@ const frutas = [
     poblacion: 3266000,
     extension: "604.3 km²"
   };
-  for (const a in ciudad) {
-    console.log(`${ciudad[a]}`);
+  for (let a in ciudad) 
+  {
+      console.log(`Clave: ${a}, Valor: ${ciudad[a]}`);
   }
