@@ -110,10 +110,25 @@ const frutas = [
     const nuevaCadena = cadena.split(palabra).join(reemplazo);
     document.getElementById('Reemplazar').innerHTML = nuevaCadena;
   }
+
+  //String con separador
   function stringSeparador() 
   {
     const lista = document.getElementById('lista').value;
     const elementos = lista.split(',');
     const separador = elementos.join(' - ');
     document.getElementById('separador').innerHTML = separador;
+  }
+
+  //Yo objeto
+  let ciudad = 
+  {
+    nombre: "Madrid",
+    fechaFundacion: "1561",
+    poblacion: 3266000,
+    extension: "604.3 km²"
+  };
+  for (const a in ciudad) 
+  {
+    console.log(`Nombre ${a.nombre}, Fecha de undacion: ${a.fechaFundacion}, Poblacion: ${a.poblacion}, Extension ${a.extension}`);
   }
