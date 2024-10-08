@@ -94,7 +94,8 @@ const frutas = [
   console.log(`Hola ${nombre}, tienes ${edad} años!`);
 
   //Calculadora de Recaudación
-  function calcularTotal() {
+  function calcularTotal() 
+  {
     const input = document.getElementById('pedido').value;
     const pedidos = input.split(',');
     let total = 0;
@@ -103,4 +104,14 @@ const frutas = [
         total += parseFloat(monto);
     });
     document.getElementById('Total').textContent = `Total: ${total}`;
-}
+  }
+
+  //Reemplazar Palabras
+  function reemplazarPalabra() 
+  {
+    const cadena = document.getElementById('cadena').value;
+    const palabra = document.getElementById('palabra').value;
+    const reemplazo = document.getElementById('reemplazo').value;
+    const nuevaCadena = cadena.split(palabra).join(reemplazo);
+    document.getElementById('Reemplazar').innerHTML = nuevaCadena;
+  }
