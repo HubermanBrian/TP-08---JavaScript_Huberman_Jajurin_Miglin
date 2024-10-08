@@ -1,4 +1,3 @@
-
 function cortarTexto()
 {
     const formulario = document.getElementById("form");
@@ -93,3 +92,15 @@ const frutas = [
   const fechaNacimiento = prompt("Ingresa tu fecha de nacimiento (YYYY-MM-DD):");
   const edad = calcularEdad(fechaNacimiento);
   console.log(`Hola ${nombre}, tienes ${edad} años!`);
+
+  //Calculadora de Recaudación
+  function calcularTotal() {
+    const input = document.getElementById('pedido').value;
+    const pedidos = input.split(',');
+    let total = 0;
+    pedidos.forEach(pedido => {
+        const [nombre, monto] = pedido.split(':');
+        total += parseFloat(monto);
+    });
+    document.getElementById('Total').textContent = `Total: ${total}`;
+}
