@@ -98,7 +98,7 @@ const frutas = [
         const [nombre, monto] = pedido.split(':');
         total += parseFloat(monto);
     });
-    document.getElementById('Total').textContent = `Total: ${total}`;
+    document.getElementById('Total').innerHTML = `Total: ${total}`;
   }
 
   //Reemplazar Palabras
@@ -109,4 +109,11 @@ const frutas = [
     const reemplazo = document.getElementById('reemplazo').value;
     const nuevaCadena = cadena.split(palabra).join(reemplazo);
     document.getElementById('Reemplazar').innerHTML = nuevaCadena;
+  }
+  function stringSeparador() 
+  {
+    const lista = document.getElementById('lista').value;
+    const elementos = lista.split(',');
+    const separador = elementos.join(' - ');
+    document.getElementById('separador').innerHTML = separador;
   }
