@@ -1,14 +1,9 @@
-function cortarTexto()
+function cortarTexto() 
 {
-    const formulario = document.getElementById("form");
-    formulario.preventDefault();
-    const cadenaString = document.getElementById("cadenaString" )
-    const numeroPos = parseFloat(document.getElementById("numeroPos"))
-    console.log(cadenaString.value)
-    console.log(numeroPos.value)
-
-    let nuevaCadenaString = document.getElementById("nuevaCadenaString").value
-    nuevaCadenaString.innerHTML = nuevaCadenaString.slice(0,numeroPos)
+  const cadena = document.getElementById('cadenaString').value;
+  const numero = parseInt(document.getElementById('numeroPos').value, 10);
+  const nuevaCadena = cadena.slice(0, numero);
+  document.getElementById('nuevaCadenaString').innerHTML = nuevaCadena;
 }
 
 //letra A  
@@ -20,10 +15,10 @@ function mostrarNombresConA()
     let resultadoDiv = document.getElementById("resultado");
     if (nombresConA.length > 0) 
     {
-      resultadoDiv.innerHTML = `<p>Nombres que comienzan con 'A': ${nombresConA.join(', ')}</p>`;
+      resultadoDiv.innerHTML = `<h2>Nombres que comienzan con 'A': ${nombresConA.join(', ')}</h2>`;
     } else 
     {
-      resultadoDiv.innerHTML = `<p>No hay nombres que comiencen con 'A'.</p>`;
+      resultadoDiv.innerHTML = `<h2>No hay nombres que comiencen con 'A'.</h2>`;
     }
 }
 
@@ -94,7 +89,7 @@ const frutas = [
   console.log(`Hola ${nombre}, tienes ${edad} años!`);
 
   //Calculadora de Recaudación
-  function calcularTotal() 
+  function calculadoraDeRecaudación() 
   {
     const input = document.getElementById('pedido').value;
     const pedidos = input.split(',');
@@ -107,7 +102,7 @@ const frutas = [
   }
 
   //Reemplazar Palabras
-  function reemplazarPalabra() 
+  function reemplazarPalabras() 
   {
     const cadena = document.getElementById('cadena').value;
     const palabra = document.getElementById('palabra').value;

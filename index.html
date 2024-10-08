@@ -7,17 +7,14 @@
 </head>
 <body>
     <script src="script.js"></script>
-    <form id="form">
-        <input type = "text" name= "cadenaString" id = "cadenaString" placeholder = "ingrese cadena string">
-        <input type = "number" name = "numeroPos" id = "numeroPos" placeholder = "ingrese numero pos">
-        <button class = "cortarTexto" id = cortarTexto onclick="cortarTexto()">Enviar</button>
-    </form>
-   
-    
-    <h1 id = "nuevaCadenaString">--- </h1>
 
+    <h1>Cortar texto</h1>
+    <input type="text" id="cadenaString" placeholder="Ingresa la cadena de texto">
+    <input type="number" id="numeroPos" placeholder="Número de caracteres">
+    <button onclick="cortarTexto()">Cortar texto</button>
+    <h2 id="nuevaCadenaString"></h2>
 
-    <h1>Nombres que comienzan con la letra 'A'</h1>
+    <h1>Nombres con 'A'</h1>
     <div>
       <label for="nombres">Ingrese una lista de nombres separados por coma:</label>
       <input type="text" id="nombres" placeholder="Ej: Ana, Pedro, Alberto, Laura">
@@ -26,16 +23,16 @@
     <h3>Nombres filtrados:</h3>
     <div id="resultado"></div>
 
-    <h1>Ingresar Pedidos</h1>
+    <h1>Calculadora de Recaudación</h1>
     <input type="text" id="pedido" placeholder="Pizza:15.50, Hamburguesa:8.75, Bebidas:4.25">
-    <button onclick="calcularTotal()">Calcular Total</button>
+    <button onclick="calculadoraDeRecaudación()">Calcular Total</button>
     <h2 id="Total">Total: 0</h2>
 
-    <h1>Reemplazar Palabra en Cadena</h1>
+    <h1>Reemplazar Palabras</h1>
     <input type="text" id="cadena" placeholder="Ingresa la cadena de texto">
     <input type="text" id="palabra" placeholder="Palabra a reemplazar">
     <input type="text" id="reemplazo" placeholder="Palabra de reemplazo">
-    <button onclick="reemplazarPalabra()">Reemplazar</button>
+    <button onclick="reemplazarPalabras()">Reemplazar</button>
     <h2 id="Reemplazar"></h2>
 
 </body>
